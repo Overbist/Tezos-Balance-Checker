@@ -1,0 +1,207 @@
+/* ---------------------------------------------------------------
+ * 01. Variables
+ * 02. Basic Styles
+ * 03. Structure
+ * 04. Content
+ * ------------------------------------------------------------ */
+
+/* ---------------------------------------------------------------
+ * 01. Variables
+ * ------------------------------------------------------------ */
+:root[data-theme="light"] {
+  --accent: #ffa500;
+  --text-color: white;
+  --title-shadow: 0 0 5px #000, 0 0 10px #000;
+  --box-shadow: 0 0 11px rgba(0, 0, 0, 0.8);
+  --box-background: rgba(0, 0, 0, 0.4);
+  --body-background: url(./assets/img/bg.jpeg);
+
+  --color-gradient-1: none;
+  --color-gradient-2: none;
+  --color-gradient-3: none;
+  --color-gradient-4: none;
+}
+
+:root[data-theme="dark"] {
+  --accent: #0d61ff;
+  --text-color: white;
+  --title-shadow: none;
+  --box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.8);
+  --box-background: rgba(0, 0, 0, 0.6);
+  --body-background: rgb(17 24 39/1);
+
+  --color-gradient-1: #7d7aff;
+  --color-gradient-2: #2121e2;
+  --color-gradient-3: #00fff0;
+  --color-gradient-4: #8785ff;
+}
+
+/* ---------------------------------------------------------------
+ * 02. Basic Styles
+ * ------------------------------------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-width: 320px;
+  background-color: black;
+  background: var(--body-background);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text-color);
+  font-family: "Nunito", "Roboto", "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  background-color: #000;
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #babac052;
+  border-radius: 16px;
+  border: 1px solid #081037;
+}
+
+/* ---------------------------------------------------------------
+ * 03. Structure
+ * ------------------------------------------------------------ */
+.mainBackground {
+  position: fixed;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 800px;
+  height: 80vh;
+  width: 100%;
+  max-width: 1400px;
+  background: radial-gradient(
+      at 71% 77%,
+      var(--color-gradient-1) 0,
+      transparent 21%
+    ),
+    radial-gradient(at 36% 47%, var(--color-gradient-3) 0, transparent 50%),
+    radial-gradient(at 54% 29%, var(--color-gradient-3) 0, transparent 28%),
+    radial-gradient(at 45% 51%, var(--color-gradient-1) 0, transparent 53%),
+    radial-gradient(at 73% 44%, var(--color-gradient-2) 0, transparent 54%),
+    radial-gradient(at 24% 7%, var(--color-gradient-2) 0, transparent 40%),
+    radial-gradient(at 76% 46%, var(--color-gradient-1) 0, transparent 50%);
+  filter: blur(44px);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(1160px + 40px);
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 110px);
+}
+
+.box {
+  width: 100%;
+  margin: 5vmin 0;
+  padding: 80px 56px;
+}
+
+.bg {
+  backdrop-filter: blur(7px);
+  background-color: var(--box-background);
+  box-shadow: var(--box-shadow);
+  transition: 0.5s;
+}
+
+@-moz-document url-prefix() {
+  .bg {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* ---------------------------------------------------------------
+ * 04. Content
+ * ------------------------------------------------------------ */
+.title {
+  text-align: center;
+  font-size: calc(8px + 4vmin);
+  text-shadow: var(--title-shadow);
+}
+
+.desc {
+  text-align: center;
+  font-size: calc(8px + 2vmin);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 240px;
+  min-width: 120px;
+  min-height: 30px;
+  padding: 5px 10px;
+  background-color: none;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  //transition: all 1s ease-out;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  &--wide {
+    width: 100%;
+  }
+
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  //------------------------------------------------------------------------------------ 480
+  .container {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .box {
+    padding: 56px 24px;
+  }
+}

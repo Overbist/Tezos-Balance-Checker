@@ -1,0 +1,22 @@
+.ghostText {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: calc(8px + 4vmin);
+
+  &__item {
+    list-style: none;
+    color: #fff;
+    font-weight: 700;
+    transition: 4s;
+
+    &:hover,
+    &:hover ~ li {
+      opacity: 0;
+      filter: blur(20px);
+      transform: rotate(180deg) translateY(-200px);
+      transition: 2s;
+    }
+  }
+}

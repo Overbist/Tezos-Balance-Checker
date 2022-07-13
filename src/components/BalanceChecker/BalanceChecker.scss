@@ -1,0 +1,99 @@
+.balanceChecker {
+  max-width: 580px;
+  margin: 80px auto;
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__input {
+    width: 100%;
+    max-width: 470px;
+    height: 30px;
+    padding: 0 10px;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    background: none;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: 0.5s;
+
+    &:hover,
+    &:focus {
+      border: 1px solid var(--accent);
+      box-shadow: 0 0 5px var(--accent), 0 0 25px var(--accent),
+        0 0 50px var(--accent);
+    }
+  }
+
+  &__btn {
+    // TODO: Added my btn
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    border: 1px solid whitesmoke;
+    background: none;
+    color: whitesmoke;
+    font-size: 16px;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      box-shadow: 0 0 5px var(--accent), 0 0 25px var(--accent),
+        0 0 50px var(--accent);
+    }
+  }
+
+  &__list {
+    margin: 40px 0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //margin-bottom: -1px;
+    background-color: var(--background);
+    border: 1px solid whitesmoke;
+    transition: 0.5s;
+
+    &:hover {
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      transform: scale(1.05);
+      box-shadow: 0 0 5px var(--accent), 0 0 25px var(--accent),
+        0 0 50px var(--accent);
+    }
+  }
+
+  &__pkh {
+    flex-grow: 1;
+    padding: 8px 16px;
+    overflow: hidden;
+  }
+
+  &__balance {
+    min-width: 121px;
+    padding: 8px 12px;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    text-align: center;
+  }
+
+  &__trash {
+    min-width: 20px;
+    margin: 8px 12px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 480px) {
+  //------------------------------------------------------------------------------------ 480
+  .balanceChecker {
+    margin: 56px auto;
+  }
+}

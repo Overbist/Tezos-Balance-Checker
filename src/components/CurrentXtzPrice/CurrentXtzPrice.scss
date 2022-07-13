@@ -1,0 +1,32 @@
+.currentXtzPrice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4px;
+  color: var(--accent);
+
+  &__text {
+    text-shadow: 0 0 5px var(--accent), 0 0 10px var(--accent),
+      0 0 20px var(--accent);
+    transition: 0.5s;
+
+    &:hover {
+      text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px var(--accent),
+        0 0 40px var(--accent), 0 0 50px var(--accent);
+    }
+  }
+
+  &__icon {
+    color: var(--accent);
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 480px) {
+  //----------------------------------------------------------------------------------- 480
+  .currentXtzPrice {
+    &__icon {
+      display: none;
+    }
+  }
+}

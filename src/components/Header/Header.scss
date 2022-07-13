@@ -1,0 +1,43 @@
+.header {
+  padding: 10px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  &__logo {
+    max-height: 50px;
+  }
+
+  &__xtzPrice {
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 1366px) {
+  //----------------------------------------------------------------------------------- 1366
+  .header {
+    &__inner {
+      max-width: calc(1160px + 40px);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  //----------------------------------------------------------------------------------- 480
+  .header {
+    &__logo {
+      max-height: 40px;
+    }
+
+    &__themeToggle {
+      transform: scale(0.7);
+    }
+  }
+}

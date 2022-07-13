@@ -1,0 +1,19 @@
+@keyframes shining-text {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+.hiddenText {
+  text-align: center;
+  font-size: calc(8px + 2vmin);
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shining-text 3s linear infinite;
+}

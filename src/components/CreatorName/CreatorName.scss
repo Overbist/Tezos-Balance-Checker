@@ -1,0 +1,20 @@
+@keyframes pound {
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.creatorName {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000, 0 0 30px #000;
+
+  &:hover {
+    animation: pound 1s infinite alternate;
+  }
+
+  &__icon {
+    animation: pound 0.5s infinite alternate;
+  }
+}
