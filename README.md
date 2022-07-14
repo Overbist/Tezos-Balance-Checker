@@ -2,7 +2,7 @@
 
 # 💱 Check the balance of your xtz wallets
 
-## Demo
+## ⭐ Demo
 
 The demo website app link - [https://tezos-balance-checker.vercel.app/](https://tezos-balance-checker.vercel.app/)
 
