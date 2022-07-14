@@ -1,6 +1,5 @@
 import { useFetch } from "../../hooks/useFetch";
 import { AiOutlineReload } from "react-icons/ai";
-import { toast } from "react-toastify";
 import "./CurrentXtzPrice.scss";
 
 interface ICurrentXtzPrice {
@@ -19,7 +18,7 @@ export const CurrentXtzPrice: React.FC<ICurrentXtzPrice> = () => {
 
   return (
     <div className="currentXtzPrice">
-      <p className="currentXtzPrice__text">1 XTZ = ${priceXtz}</p>
+      <p className="currentXtzPrice__text">1ꜩ = ${priceXtz}</p>
       <AiOutlineReload
         className="currentXtzPrice__icon"
         onClick={refetch}

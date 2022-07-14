@@ -2,7 +2,7 @@ import React from "react";
 import { ThemeContext, themes } from "../contexts/ThemeContext";
 
 const getTheme = () => {
-  const theme = `${window?.localStorage?.getItem("theme")}`;
+  const theme = `${window.localStorage.getItem("theme")}`;
   if (Object.values(themes).includes(theme)) return theme;
 
   const userMedia = window.matchMedia("(prefers-color-scheme: light)");

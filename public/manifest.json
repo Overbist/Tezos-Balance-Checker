@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Tezos Checker",
+  "name": "Tezos Balance Checker",
   "icons": [
     {
       "src": "favicon.ico",

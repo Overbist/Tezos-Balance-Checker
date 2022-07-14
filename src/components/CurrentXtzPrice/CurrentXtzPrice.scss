@@ -1,11 +1,12 @@
 .currentXtzPrice {
   display: flex;
   justify-content: center;
-  align-items: center;
+  //align-items: center;
   column-gap: 4px;
   color: var(--accent);
 
   &__text {
+    font-weight: 700;
     text-shadow: 0 0 5px var(--accent), 0 0 10px var(--accent),
       0 0 20px var(--accent);
     transition: 0.5s;
